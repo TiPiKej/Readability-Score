@@ -1,6 +1,5 @@
 import org.hyperskill.hstest.stage.StageTest;
 import org.hyperskill.hstest.testcase.SimpleTestCase;
-import readability.Main;
 
 import java.util.List;
 

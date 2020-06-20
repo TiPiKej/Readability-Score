@@ -1,15 +1,17 @@
-package readability;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int charSum = 0;
-        String s = scanner.nextLine();
-        for (char c : s.toCharArray()) {
-            charSum++;
+        int count = 0;
+        String[] sentences = scanner.nextLine().split("[!\\.\\?]");
+        for (String s : sentences) {
+            count += s.split(" ").length;
         }
 
-        System.out.println(charSum > 100 ? "HARD" : "EASY");
+//        System.out.printf("%d...%d\n", count, sentences.length);
+
+        System.out.println((count / sentences.length) > 10 ? "HARD" : "EASY");
     }
 }
+
