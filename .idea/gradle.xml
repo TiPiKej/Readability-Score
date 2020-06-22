@@ -11,7 +11,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Problems/Account" />
             <option value="$PROJECT_DIR$/Problems/Area of a circle" />
+            <option value="$PROJECT_DIR$/Problems/Army" />
+            <option value="$PROJECT_DIR$/Problems/Binary search" />
+            <option value="$PROJECT_DIR$/Problems/Book" />
             <option value="$PROJECT_DIR$/Problems/Boxes" />
             <option value="$PROJECT_DIR$/Problems/Car" />
             <option value="$PROJECT_DIR$/Problems/Distance" />
@@ -20,13 +24,18 @@
             <option value="$PROJECT_DIR$/Problems/Fixing the main method" />
             <option value="$PROJECT_DIR$/Problems/Fixing the main method (1)" />
             <option value="$PROJECT_DIR$/Problems/Get first and last elements" />
+            <option value="$PROJECT_DIR$/Problems/Getting input" />
+            <option value="$PROJECT_DIR$/Problems/Getting the fullname" />
             <option value="$PROJECT_DIR$/Problems/Inverse boolean flags" />
             <option value="$PROJECT_DIR$/Problems/Move the first N characters" />
             <option value="$PROJECT_DIR$/Problems/Palindrome" />
+            <option value="$PROJECT_DIR$/Problems/Preparing full name" />
             <option value="$PROJECT_DIR$/Problems/Print  We are robots!" />
             <option value="$PROJECT_DIR$/Problems/Snail" />
+            <option value="$PROJECT_DIR$/Problems/Sorting arrays" />
             <option value="$PROJECT_DIR$/Problems/Sorting numbers" />
             <option value="$PROJECT_DIR$/Problems/The percentage of G and C characters" />
+            <option value="$PROJECT_DIR$/Problems/The sum of elements" />
             <option value="$PROJECT_DIR$/Readability Score/task" />
             <option value="$PROJECT_DIR$/util" />
           </set>
