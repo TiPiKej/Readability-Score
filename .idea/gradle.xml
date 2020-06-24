@@ -12,13 +12,20 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Problems/Account" />
+            <option value="$PROJECT_DIR$/Problems/Advanced calculator" />
+            <option value="$PROJECT_DIR$/Problems/Are siblings" />
             <option value="$PROJECT_DIR$/Problems/Area of a circle" />
             <option value="$PROJECT_DIR$/Problems/Army" />
+            <option value="$PROJECT_DIR$/Problems/Avoid division by zero" />
+            <option value="$PROJECT_DIR$/Problems/Basic calculator" />
             <option value="$PROJECT_DIR$/Problems/Binary search" />
             <option value="$PROJECT_DIR$/Problems/Book" />
             <option value="$PROJECT_DIR$/Problems/Boxes" />
             <option value="$PROJECT_DIR$/Problems/Car" />
+            <option value="$PROJECT_DIR$/Problems/Catching some exceptions" />
             <option value="$PROJECT_DIR$/Problems/Classes for Hospital" />
+            <option value="$PROJECT_DIR$/Problems/Converting and multiplying" />
+            <option value="$PROJECT_DIR$/Problems/Cyclically shifting elements" />
             <option value="$PROJECT_DIR$/Problems/Distance" />
             <option value="$PROJECT_DIR$/Problems/Double characters" />
             <option value="$PROJECT_DIR$/Problems/Find X" />
@@ -30,11 +37,13 @@
             <option value="$PROJECT_DIR$/Problems/Inverse boolean flags" />
             <option value="$PROJECT_DIR$/Problems/Move the first N characters" />
             <option value="$PROJECT_DIR$/Problems/Palindrome" />
+            <option value="$PROJECT_DIR$/Problems/Parameters and their values" />
             <option value="$PROJECT_DIR$/Problems/Preparing full name" />
             <option value="$PROJECT_DIR$/Problems/Print  We are robots!" />
             <option value="$PROJECT_DIR$/Problems/Snail" />
             <option value="$PROJECT_DIR$/Problems/Sorting arrays" />
             <option value="$PROJECT_DIR$/Problems/Sorting numbers" />
+            <option value="$PROJECT_DIR$/Problems/String to double conversion" />
             <option value="$PROJECT_DIR$/Problems/The percentage of G and C characters" />
             <option value="$PROJECT_DIR$/Problems/The sum of elements" />
             <option value="$PROJECT_DIR$/Readability Score/task" />
