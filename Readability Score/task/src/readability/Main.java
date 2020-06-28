@@ -121,10 +121,10 @@ public class Main {
 
     private static int ari(int charCount, int wordCount, int sentenceCount) {
         double score = 4.71 * ((double)charCount / (double)wordCount) + 0.5 * ((double)wordCount / (double)sentenceCount) - 21.43;
+        int age = Integer.parseInt(ageInfo(score));
 
         // formatting score
         score = Math.floor(score * 100) / 100;
-        int age = Integer.parseInt(ariAge(score));
 
         System.out.printf("Automated Readability Index: %.2f (about %d year olds).\n", score, age);
 
@@ -132,34 +132,60 @@ public class Main {
     }
 
     private static int fk(int wordCount, int sentenceCount, int syllables) {
-        // TO DO
-        return 0;
+        double score = 0.39 * (double)wordCount / (double)sentenceCount + 11.8 * (double)syllables / (double)wordCount - 15.59;
+        int age = Integer.parseInt(ageInfo(score));
+
+        // formatting score
+        score = Math.floor(score * 100) / 100;
+
+        System.out.printf("Flesch–Kincaid readability tests: %.2f (about %d year olds).\n", score, age);
+
+        return age;
     }
 
     private static int smog(int polySyllables, int sentenceCount) {
-        // TO DO
-        return 0;
+        double score = 1.043 * Math.sqrt((double)polySyllables * 30 / (double)sentenceCount) + 3.1291;
+        int age = Integer.parseInt(ageInfo(score));
+
+        // formatting score
+        score = Math.floor(score * 100) / 100;
+
+        System.out.printf("Simple Measure of Gobbledygook: %.2f (about %d year olds).\n", score, age);
+
+        return age;
     }
 
     private static int cl(int wordCount, int charCount, int sentenceCount) {
-        // TO DO
-        return 0;
+        final double L = (double)charCount / (double)wordCount * 100;
+        final double S = (double)sentenceCount / (double)wordCount * 100;
+
+        double score = 0.0588 * L - 0.296 * S - 15.8;
+        int age = Integer.parseInt(ageInfo(score));
+
+        // formatting score
+        score = Math.floor(score * 100) / 100;
+
+        System.out.printf("Coleman–Liau index: %.2f (about %d year olds).\n", score, age);
+
+        return age;
     }
 
-    private static String ariAge(Double score) {
-        if (score > 13) return "24";
-        if (score > 12) return "18";
-        if (score > 11) return "17";
-        if (score > 10) return "16";
-        if (score > 9) return "15";
-        if (score > 8) return "14";
-        if (score > 7) return "13";
-        if (score > 6) return "12";
-        if (score > 5) return "11";
-        if (score > 4) return "10";
-        if (score > 3) return "9";
-        if (score > 2) return "7";
-        if (score > 1) return "6";
+    private static String ageInfo(Double score) {
+        int scoreParsed = (int) Math.round(score);
+
+        if (scoreParsed > 13) return "24";
+        if (scoreParsed == 12) return "18";
+        if (scoreParsed == 11) return "17";
+        if (scoreParsed == 10) return "16";
+        if (scoreParsed == 9) return "15";
+        if (scoreParsed == 8) return "14";
+        if (scoreParsed == 7) return "13";
+        if (scoreParsed == 6) return "12";
+        if (scoreParsed == 5) return "11";
+        if (scoreParsed == 4) return "10";
+        if (scoreParsed == 3) return "9";
+        if (scoreParsed == 2) return "7";
+        if (scoreParsed == 1) return "6";
         return "5";
     }
 }
