@@ -343,6 +343,113 @@ files:
         }
     }
   learner_created: false
+- name: src/readability/in2.txt
+  visible: true
+  text: This is the page of the Simple English Wikipedia. A place where people work
+    together to write encyclopedias in different languages. That includes children
+    and adults who are learning English. There are 142,262 articles on the Simple
+    English Wikipedia. All of the pages are free to use. They have all been published
+    under both the Creative Commons License 3 and the GNU Free Documentation License.
+    You can help here! You may change these pages and make new pages. Read the help
+    pages and other good pages to learn how to write pages here. You may ask questions
+    at Simple talk.
+  learner_created: true
+- name: src/readability/Main.java
+  visible: true
+  text: |+
+    package readability;
+
+    import java.io.FileNotFoundException;
+    import java.util.Arrays;
+    import java.util.Scanner;
+    import java.io.File;
+
+    public class Main {
+        public static void main(String[] args) {
+            File file = new File(args[0]);
+            try (Scanner scanner = new Scanner(file)) {
+                // skip first line
+    //            scanner.nextLine();
+                int sentenceCount = 0;
+                int wordCount = 0;
+                int charCount = 0;
+                String[] sentences = new String[100];
+                String[] words = new String[100];
+                while (scanner.hasNextLine()) {
+                    String line = scanner.nextLine();
+                    if (!Character.toString(line.charAt(line.length() - 1)).matches("[!\\.\\?]")) {
+                        // if in the end of line isnt any end sentence like !.? i decrement it cuz then i added count of all sentences
+                        charCount--;
+                    }
+
+                    sentences = line.split("[!\\.\\?]");
+                    sentenceCount += sentences.length;
+
+                    for (String sentence : sentences) {
+                        words = sentence.trim().split(" ");
+                        wordCount += words.length;
+
+                        for (String word : words) {
+                            charCount += word.trim().length();
+                        }
+                    }
+                }
+
+                charCount += sentenceCount;
+
+                System.out.printf("Words: %s\n", wordCount);
+                System.out.printf("Sentences: %s\n", sentenceCount);
+                System.out.printf("Characters: %s\n", charCount);
+
+                double score = 4.71 * ((double)charCount / (double)wordCount) + 0.5 * ((double)wordCount / (double)sentenceCount) - 21.43;
+
+                // formatting score
+                score = Math.floor(score * 100) / 100;
+
+                System.out.printf("The score is: %.2f\n", score);
+                System.out.printf("This text should be understood by %s year olds.", age(score));
+            } catch (final FileNotFoundException e) {
+                System.out.printf("No file: %s", args[0]);
+            }
+        }
+
+        private static String age(Double score) {
+            if (score > 13) return "24+";
+            if (score > 12) return "18-24";
+            if (score > 11) return "17-18";
+            if (score > 10) return "16-17";
+            if (score > 9) return "15-16";
+            if (score > 8) return "14-15";
+            if (score > 7) return "13-14";
+            if (score > 6) return "12-13";
+            if (score > 5) return "11-12";
+            if (score > 4) return "10-11";
+            if (score > 3) return "9-10";
+            if (score > 2) return "7-9";
+            if (score > 1) return "6-7";
+            return "5-6";
+        }
+    }
+
+  learner_created: true
+- name: src/readability/in1.txt
+  visible: true
+  text: Readability is the ease with which a reader can understand a written text.
+    In natural language, the readability of text depends on its content and its presentation.
+    Researchers have used various factors to measure readability. Readability is more
+    than simply legibility, which is a measure of how easily a reader can distinguish
+    individual letters or characters from each other. Higher readability eases reading
+    effort and speed for any reader, but it is especially important for those who
+    do not have high reading comprehension. In readers with poor reading comprehension,
+    raising the readability level of a text from mediocre to good can make the difference
+    between success and failure
+  learner_created: true
+- name: src/readability/in.txt
+  visible: true
+  learner_created: true
+- name: src/readability/test.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/39/stages/208/implement
 status: Unchecked
 record: -1
